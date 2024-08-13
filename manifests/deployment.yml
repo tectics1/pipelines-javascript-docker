@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: tecticspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tecticspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: tecticspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: tecticspipelinesjavascriptdocker 
+          image: testics1registry2024.azurecr.io/tecticspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
